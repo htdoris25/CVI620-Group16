@@ -6,5 +6,5 @@ StudentID: 123175226
 Name: Julian Hunag
 StudentID:
 
-Name: Ying Tong
-StudentID;
+Name: Yingtong Lyu
+StudentID: 143631224
