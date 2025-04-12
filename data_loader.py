@@ -54,5 +54,25 @@ def balanceDataSet(data, display=True):
 
     return data
 
+# Load images and steering angles
+def load_images_and_steering(data, img_folder='IMG'):
+    images = []
+    steerings = []
+    for i in range(len(data)):
+        img_path = os.path.join(img_folder, data.iloc[i]['Center'])
+        if os.path.isfile(img_path):
+            image = cv2.imread(img_path)
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            images.append(image)
+            steerings.append(float(data.iloc[i]['Steering']))
+    return np.array(images), np.array(steerings)
+
+
 data = InitData('.')
 data = balanceDataSet(data, display=True)
+
+images, steerings = load_images_and_steering(data)
+images = images / 255.0  # Normalize
+
+X_train, X_val, y_train, y_val = train_test_split(images, steerings, test_size=0.2, random_state=42)
+
