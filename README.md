@@ -3,7 +3,7 @@
 Name: Hsien-Ting Liao
 StudentID: 123175226
 
-Name: Julian Hunag
+Name: Julian Huang
 StudentID: 134161231
 
 Name: Yingtong Lyu
