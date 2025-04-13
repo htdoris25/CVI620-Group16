@@ -21,8 +21,8 @@ def img_preprocess(img):
     return processed_img
 
 
-img = cv2.imread('test.jpg')
-processed_img = img_preprocess(img)
-cv2.imshow('Test Img', processed_img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# img = cv2.imread('test.jpg')
+# processed_img = img_preprocess(img)
+# cv2.imshow('Test Img', processed_img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
